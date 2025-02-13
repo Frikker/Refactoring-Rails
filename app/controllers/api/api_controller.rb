@@ -1,6 +1,8 @@
 module Api
   class ApiController < ApplicationController
 
+    protect_from_forgery with: :null_session
+
     private
 
     def render_error(errors)

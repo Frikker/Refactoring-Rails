@@ -9,7 +9,7 @@ module Api
       def create
         @user = Users::Create.run(params)
         if @user.valid?
-          render json: { user: @user }, status: :created
+          render json: { message: "Successfully created" }, status: :created
         else
           render_error(@user.errors)
         end
